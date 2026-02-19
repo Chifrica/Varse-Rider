@@ -12,7 +12,6 @@ import {
 } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Formik } from 'formik'
-// import { Asset } from 'react-native-image-picker'
 import { PickedImage } from '@/app/util/imagePicker'
 import { KYCValidationSchema } from '@/app/util/validation'
 import { pickImage } from '@/app/util/imagePicker'
@@ -174,7 +173,7 @@ const Registration = () => {
                                             style={styles.button}
                                         >
                                             <Text style={styles.buttonText}>
-                                                Continue
+                                                Next
                                             </Text>
                                         </TouchableOpacity>
                                     </>
@@ -210,8 +209,32 @@ const Registration = () => {
                                         )}
                                     </TouchableOpacity>
                                 ))}
+
+                                {/* ✅ SUBMIT DOCUMENTS BUTTON */}
+                                <TouchableOpacity
+                                    style={[
+                                        styles.button,
+                                        (!ninImage || !profileImage) && { opacity: 0.5 }
+                                    ]}
+                                    disabled={!ninImage || !profileImage}
+                                    onPress={() => {
+                                        // Final submission
+                                        const payload = {
+                                            ninImage,
+                                            profileImage
+                                        }
+
+                                        console.log('Submitting documents:', payload)
+                                        // 🔜 call API here
+                                    }}
+                                >
+                                    <Text style={styles.buttonText}>
+                                        Submit Documents
+                                    </Text>
+                                </TouchableOpacity>
                             </View>
                         )}
+
                     </Animated.View>
                 </ScrollView>
             </KeyboardAvoidingView>
