@@ -60,12 +60,7 @@ const Registration = () => {
 
                     {/* Tabs */}
                     <View
-                        style={{
-                            flexDirection: 'row',
-                            marginTop: SPACING.lg,
-                            borderBottomWidth: 1,
-                            borderColor: COLORS.border
-                        }}
+                        style={styles.tabContainer}
                     >
                         {(['basic', 'documents'] as TabType[]).map((tab) => (
                             <TouchableOpacity
@@ -113,19 +108,14 @@ const Registration = () => {
                                 }) => (
                                     <>
                                         {(['fullName', 'phone'] as const).map((field) => (
-                                            <View key={field} style={{ marginTop: SPACING.lg }}>
-                                                <Text style={{ marginBottom: SPACING.xs, fontWeight: 700, color: COLORS.muted }}>
+                                            <View key={field} style={styles.form}>
+                                                <Text style={styles.label}>
                                                     {field === 'fullName'
                                                         ? 'Full Name'
                                                         : 'Phone Number'}
                                                 </Text>
                                                 <TextInput
-                                                    style={{
-                                                        borderWidth: 1,
-                                                        borderColor: COLORS.border,
-                                                        borderRadius: RADIUS.md,
-                                                        padding: SPACING.md
-                                                    }}
+                                                    style={styles.input}
                                                     keyboardType={
                                                         field === 'phone' ? 'phone-pad' : 'default'
                                                     }
@@ -136,7 +126,7 @@ const Registration = () => {
                                                     }
                                                 />
                                                 {touched[field] && errors[field] && (
-                                                    <Text style={{ color: 'red', marginTop: 4 }}>
+                                                    <Text style={styles.errorText}>
                                                         {errors[field]}
                                                     </Text>
                                                 )}
@@ -145,8 +135,8 @@ const Registration = () => {
 
                                         {/* Vehicle Type */}
                                         <View style={{ marginTop: SPACING.lg }}>
-                                            <Text style={{ fontWeight: 700, color: COLORS.muted }}>Vehicle Type</Text>
-                                            <View style={{ flexDirection: 'row', marginTop: 8 }}>
+                                            <Text style={styles.vehicleText}>Vehicle Type</Text>
+                                            <View style={styles.vehicleContainer}>
                                                 {(['motorcycle', 'bicycle'] as const).map((type) => (
                                                     <TouchableOpacity
                                                         key={type}
@@ -169,7 +159,7 @@ const Registration = () => {
                                                                     : 'transparent'
                                                         }}
                                                     >
-                                                        <Text style={{ textAlign: 'center' }}>
+                                                        <Text style={styles.selectedVehicleText}>
                                                             {type === 'motorcycle'
                                                                 ? 'Motorcycle'
                                                                 : 'Bicycle'}
@@ -181,14 +171,9 @@ const Registration = () => {
 
                                         <TouchableOpacity
                                             onPress={() => handleSubmit()}
-                                            style={{
-                                                backgroundColor: COLORS.primary,
-                                                padding: SPACING.md,
-                                                borderRadius: RADIUS.md,
-                                                marginTop: SPACING.xl
-                                            }}
+                                            style={styles.button}
                                         >
-                                            <Text style={{ color: '#fff', textAlign: 'center' }}>
+                                            <Text style={styles.buttonText}>
                                                 Continue
                                             </Text>
                                         </TouchableOpacity>
@@ -213,22 +198,15 @@ const Registration = () => {
                                             const image = await pickImage(false)
                                             if (image) item.setter(image)
                                         }}
-                                        style={{
-                                            borderWidth: 1,
-                                            borderColor: COLORS.border,
-                                            borderRadius: RADIUS.md,
-                                            padding: SPACING.lg,
-                                            alignItems: 'center',
-                                            marginBottom: SPACING.md
-                                        }}
+                                        style={styles.uploadBox}
                                     >
                                         {item.image ? (
                                             <Image
                                                 source={{ uri: item.image.uri }}
-                                                style={{ width: 80, height: 80, borderRadius: 40 }}
+                                                style={styles.imagePreview}
                                             />
                                         ) : (
-                                            <Text>{item.label}</Text>
+                                            <Text style={styles.uploadText}>{item.label}</Text>
                                         )}
                                     </TouchableOpacity>
                                 ))}

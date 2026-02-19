@@ -2,165 +2,168 @@ import { COLORS, RADIUS, SPACING } from '@/app/util/theme'
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.background
-  },
+    container: {
+        flex: 1,
+        backgroundColor: COLORS.background
+    },
 
-  flex: {
-    flex: 1
-  },
+    flex: {
+        flex: 1
+    },
 
-  /* ---------- Header ---------- */
-  header: {
-    alignItems: 'center',
-    marginBottom: SPACING.lg
-  },
+    /* ---------- Header ---------- */
+    header: {
+        alignItems: 'center',
+        marginBottom: SPACING.lg
+    },
 
-  title: {
-    fontSize: 24,
-    fontWeight: '700',
-    color: "#ff8800",
-    textAlign: "center"
-    // marginBottom: SPACING.xs
-    
-  },
+    title: {
+        fontSize: 24,
+        fontWeight: '700',
+        color: "#ff8800",
+        textAlign: "center"
+        // marginBottom: SPACING.xs
 
-  subTitle: {
-    fontSize: 14,
-    color: COLORS.muted,
-    textAlign: 'center'
-  },
+    },
 
-  /* ---------- Tabs ---------- */
-  tabContainer: {
-    flexDirection: 'row',
-    marginTop: SPACING.lg,
-    borderBottomWidth: 1,
-    borderColor: COLORS.border
-  },
+    subTitle: {
+        fontSize: 14,
+        color: COLORS.muted,
+        textAlign: 'center'
+    },
 
-  tab: {
-    flex: 1,
-    paddingVertical: SPACING.sm,
-    alignItems: 'center'
-  },
+    /* ---------- Tabs ---------- */
+    tabContainer: {
+        flexDirection: 'row',
+        marginTop: SPACING.lg,
+        borderBottomWidth: 1,
+        borderColor: COLORS.border
+    },
 
-  activeTab: {
-    borderBottomWidth: 2,
-    borderColor: COLORS.primary
-  },
+    tab: {
+        flex: 1,
+        paddingVertical: SPACING.sm,
+        alignItems: 'center'
+    },
 
-  tabText: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: COLORS.muted
-  },
+    activeTab: {
+        borderBottomWidth: 2,
+        borderColor: COLORS.primary
+    },
 
-  activeTabText: {
-    color: COLORS.primary
-  },
+    tabText: {
+        fontSize: 14,
+        fontWeight: '600',
+        color: COLORS.muted
+    },
 
-  /* ---------- Forms ---------- */
-  form: {
-    marginTop: SPACING.lg
-  },
+    activeTabText: {
+        color: COLORS.primary
+    },
 
-  inputGroup: {
-    marginBottom: SPACING.lg
-  },
+    /* ---------- Forms ---------- */
+    form: {
+        marginTop: SPACING.lg
+    },
 
-  label: {
-    fontSize: 14,
-    color: COLORS.text,
-    marginBottom: SPACING.xs,
-    fontWeight: '500'
-  },
+    inputGroup: {
+        marginBottom: SPACING.lg
+    },
 
-  input: {
-    borderWidth: 1,
-    borderColor: COLORS.border,
-    borderRadius: RADIUS.md,
-    padding: SPACING.md,
-    fontSize: 14,
-    color: COLORS.text,
-    backgroundColor: '#fff'
-  },
+    label: {
+        fontSize: 14,
+        color: COLORS.text,
+        marginBottom: SPACING.xs,
+        fontWeight: '500'
+    },
 
-  errorText: {
-    marginTop: 4,
-    fontSize: 12,
-    color: 'red'
-  },
+    input: {
+        borderWidth: 1,
+        borderColor: COLORS.border,
+        borderRadius: RADIUS.md,
+        padding: SPACING.md,
+        fontSize: 14,
+        color: COLORS.text,
+        backgroundColor: '#fff'
+    },
 
-  /* ---------- Vehicle Type ---------- */
-  vehicleContainer: {
-    flexDirection: 'row',
-    marginTop: SPACING.sm
-  },
+    errorText: {
+        marginTop: 4,
+        fontSize: 12,
+        color: 'red'
+    },
 
-  vehicleOption: {
-    flex: 1,
-    padding: SPACING.md,
-    borderWidth: 1,
-    borderColor: COLORS.border,
-    borderRadius: RADIUS.md,
-    alignItems: 'center',
-    marginRight: SPACING.sm
-  },
+    /* ---------- Vehicle Type ---------- */
+    vehicleContainer: {
+        flexDirection: 'row',
+        marginTop: SPACING.sm
+    },
 
-  selectedVehicle: {
-    borderColor: COLORS.primary,
-    backgroundColor: '#EFF6FF'
-  },
+    vehicleOption: {
+        flex: 1,
+        padding: SPACING.md,
+        borderWidth: 1,
+        borderColor: COLORS.border,
+        borderRadius: RADIUS.md,
+        alignItems: 'center',
+        marginRight: SPACING.sm
+    },
 
-  vehicleText: {
-    fontSize: 14,
-    color: COLORS.text
-  },
+    selectedVehicle: {
+        borderColor: COLORS.primary,
+        backgroundColor: '#EFF6FF'
+    },
 
-  selectedVehicleText: {
-    color: COLORS.primary,
-    fontWeight: '600'
-  },
+    vehicleText: {
+        fontSize: 14,
+        color: COLORS.text,
+        fontWeight: 700
+    },
 
-  /* ---------- Upload Boxes ---------- */
-  uploadBox: {
-    borderWidth: 1,
-    borderStyle: 'dashed',
-    borderColor: COLORS.border,
-    borderRadius: RADIUS.md,
-    paddingVertical: SPACING.xl,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: SPACING.md
-  },
+    selectedVehicleText: {
+        color: COLORS.muted,
+        fontWeight: '500',
+        textAlign: 'center'
+    },
 
-  uploadText: {
-    fontSize: 14,
-    color: COLORS.muted
-  },
+    /* ---------- Upload Boxes ---------- */
+    uploadBox: {
+        borderWidth: 1,
+        borderStyle: 'dashed',
+        borderColor: COLORS.border,
+        borderRadius: RADIUS.md,
+        paddingVertical: SPACING.xl,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: SPACING.md
+    },
 
-  imagePreview: {
-    width: 80,
-    height: 80,
-    borderRadius: 40
-  },
+    uploadText: {
+        fontSize: 14,
+        color: COLORS.muted
+    },
 
-  /* ---------- Button ---------- */
-  button: {
-    backgroundColor: COLORS.primary,
-    paddingVertical: SPACING.md,
-    borderRadius: RADIUS.md,
-    marginTop: SPACING.xl,
-    alignItems: 'center'
-  },
+    imagePreview: {
+        width: "100%",
+        height: 100,
+        borderRadius: 10,
+        resizeMode: "contain"
+    },
 
-  buttonText: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: '600'
-  }
+    /* ---------- Button ---------- */
+    button: {
+        backgroundColor: COLORS.primary,
+        paddingVertical: SPACING.md,
+        borderRadius: RADIUS.md,
+        marginTop: SPACING.xl,
+        alignItems: 'center'
+    },
+
+    buttonText: {
+        color: '#fff',
+        fontSize: 16,
+        fontWeight: '600'
+    }
 })
 
 export default styles
